@@ -60,6 +60,7 @@ flagd = 0;
 cfinal = [];
 dfinal = [];
 
+% optimizing thresholding for each slide of human patient data
     for i = 0.01:0.01:0.2
        c1 = ProcessImage(Dpre,i);
        test = sum(c1, 'all');
