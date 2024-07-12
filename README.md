@@ -3,7 +3,7 @@
 
 # Matlab files to use for in vitro cell line data or cells retrieved from mouse samples
 
-To test the Weibull distribution to model MDA-MB231 and MCF10A adhesion profiles (Figure 5 of manuscript), in a monoculture and co-culture, we simulated mixtures with varying adhesion strength to test the accuracy of the method’s predictions of T50 and cancer cell fraction in a virtual mixture, and used the script "PlotCoCulture_rev2.m". The error of the predictions of T50 and cancer fraction were calculated using the script "ShearPredictions_rev2.m".
+To test the Weibull distribution to model MDA-MB231 and MCF10A adhesion profiles (Figure 5 of manuscript), in a monoculture and co-culture, we simulated mixtures with varying adhesion strength to test the accuracy of the method’s predictions of T50 and cancer cell fraction in a virtual mixture, and used the script "PlotCoCulture_rev2.m".  To run script "ComsolShears.mat" is needed in file directory. User may edit line 6 with file directory, edit line 7 with dates of individual folders with data, and edit line 8 with the various tested percentages of the cancer fraction. The error of the predictions of T50 and cancer fraction were calculated using the script "ShearPredictions_rev2.m". To run script "ComsolShears.mat" is needed in file directory.
    
 The main script to generate adhesion curves for individual microscope slides/technical replicates is                         "ShearAnalysis_rev14_InVitroCellLines_MouseData.m". To run script "fancyPlot.m", "readnd2.m", and "ComsolShears.mat" are needed in file directory as they are called in "ShearAnalysis_rev14_InVitroCellLines_MouseData.m". User will edit line 15 to input directory where nd2 files are stored. Additionally, line 17 may be edited if maximum shear stress within dPPFC is changed. Depending upon the number of cell lines used in dPPFC experiment, user will edit line 18 and input 1 if experiment was a monoculture or 2 if experiment was a co-culture. User will edit lines 24 and 25 to input names of pre and post shear nd2 files. Now code can be run to achieve adhesion curves for each slide/replicate.
 
@@ -13,7 +13,7 @@ To determine which slides/replicates have an R^2 above a specific threshold, use
 
 To generate curves where migration data (cell speed and displacement) is plotted against adhesion strength user can use "AdhesionVsSpeed.m". To run script "natsort.m", "natsortfiles.m", "PlotSpeed.m", "ComsolShears.mat" and "MigrationData.mat" are needed in file directory. User will edit lines 12-24 with file paths where replicates for     different cell line are located to analyze with script. User will edit line 37 to the maximum shear stress used in dPPFC experiment. Now code can be run to achieve migration versus adhesion data for different cell lines.  
 
-To generate a logistic regression model and run an ROC analysis the script "ROCAnalysis_rev2.2" was used.
+To generate a logistic regression model and run an ROC analysis the script "ROCAnalysis_rev2.2" was used. User will edit line 2 to input file to be analyzed.
 
 # Matlab files used for human patient sample data
 
